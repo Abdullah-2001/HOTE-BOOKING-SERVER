@@ -3,11 +3,12 @@ import dotenv from "dotenv";
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import colors from 'colors';
-//import ConnectDB from './config/db.js';
+import ConnectDB from './config/db.js';
+import authRoute from './routes/auth.js'
 
 dotenv.config();
 
-//ConnectDB();
+ConnectDB();
 
 const app = express();
 
@@ -16,7 +17,9 @@ app.use(bodyParser.json());
 app.use(express.json())
 app.use(cors())
 
-// D9CJmWDc6EOeQfej
+app.use('/api/auth', authRoute);
+
+
 
 
 
