@@ -17,18 +17,9 @@ const hotelSchema = new mongoose.Schema({
       type: String,
       required: true
     },
-    contact: {
-      email: {
+    phone: {
         type: String,
         required: true
-      },
-      phone: {
-        type: String,
-        required: true
-      },
-      website: {
-        type: String
-      },
     },
     price:{
         type: Number,
@@ -56,10 +47,6 @@ const hotelSchema = new mongoose.Schema({
             required: true
           },
           beds: {
-            type: String,
-            required: true
-          },
-          beds: {
             type: Number,
             required: true
           },
@@ -81,7 +68,7 @@ const hotelSchema = new mongoose.Schema({
       type: String,
       required: true
     },
-    // Additional fields like rooms, services, policies, etc.
+    
   }, {
     timestamps: true
   });
